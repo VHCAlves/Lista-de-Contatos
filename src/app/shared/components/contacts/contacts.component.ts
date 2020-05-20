@@ -18,6 +18,7 @@ export class ContactsComponent implements OnInit {
   newContact: Contact  = new Contact();
   name: string = "";
   phone: string = "";
+  formValidado: boolean = true;
   
   myModel= '';
   value='';
@@ -59,13 +60,19 @@ export class ContactsComponent implements OnInit {
     this.newContact.name = this.name;
     this.newContact.phone = this.phone;
 
-    if(this.name != "" && this.phone != "")
+    if(this.name != "" && this.phone != "") {
+      this.formValidado = true;
       this.contactService 
-        .addContact(this.newContact)
-        .subscribe(() => {
-          this.list();
-          this.cadastrar = false;
-        });
+      .addContact(this.newContact)
+      .subscribe(() => {
+        this.list();
+        this.cadastrar = false;
+      });
+
+    } else {
+      this.formValidado = false;
+    }
+
   }
 
   delete(contact: Contact) {
