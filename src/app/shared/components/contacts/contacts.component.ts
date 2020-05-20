@@ -16,8 +16,8 @@ export class ContactsComponent implements OnInit {
   selectedIndex: number = 0;
 
   newContact: Contact  = new Contact();
-  name: string;
-  phone: string;
+  name: string = "";
+  phone: string = "";
   
   myModel= '';
   value='';
@@ -58,12 +58,14 @@ export class ContactsComponent implements OnInit {
   add(contact: Contact) {
     this.newContact.name = this.name;
     this.newContact.phone = this.phone;
-    this.contactService 
-      .addContact(this.newContact)
-      .subscribe(() => {
-        this.list();
-        this.cadastrar = false;
-      });
+
+    if(this.name != "" && this.phone != "")
+      this.contactService 
+        .addContact(this.newContact)
+        .subscribe(() => {
+          this.list();
+          this.cadastrar = false;
+        });
   }
 
   delete(contact: Contact) {
