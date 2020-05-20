@@ -6,5 +6,5 @@ export interface Contact {
     phone:string;
     name:string;
     imgUrl:string;
-    items: [];
+    items: Array<any>;
 }

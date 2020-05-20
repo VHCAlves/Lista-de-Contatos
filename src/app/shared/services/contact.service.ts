@@ -22,7 +22,7 @@ export class ContactService {
     listContacts(){
     
         return this.http
-            .get<Contact[]>(API)
+            .get<Contact>(API)
             .pipe(
             retry(2),
             catchError(this.handleError))

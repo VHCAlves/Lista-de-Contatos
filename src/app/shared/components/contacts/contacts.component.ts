@@ -44,7 +44,7 @@ export class ContactsComponent implements OnInit {
     this.cadastrar = false;
     this.contactService
       .listContacts()
-      .subscribe((contacts: Contact[]) => {
+      .subscribe((contacts: Contact) => {
         this.contacts = contacts.items;
     });
   }
