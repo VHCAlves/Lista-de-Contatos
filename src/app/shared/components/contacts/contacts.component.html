@@ -1,0 +1,79 @@
+<mat-card>
+  <mat-tab-group mat-align-tabs="center" [(selectedIndex)]="selectedIndex" (selectedTabChange)="tabChanged($event)">
+
+    <mat-tab class="text-label-abas"  label="INCLUIR CONTATO">
+
+      <ng-container *ngIf="cadastrar">
+        <div class="label-informativo-cadastro">
+            <p>
+            Para incluir, preencha os dados abaixo
+          </p>
+        </div>
+        <p>
+          <mat-form-field hideRequiredMarker>
+            <input matInput #contactName placeholder="Nome" maxlength="20" [(ngModel)]="value">
+          </mat-form-field>
+          <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </p>
+        <p>
+          <mat-form-field hideRequiredMarker>
+            <input matInput [textMask]="{mask: datemask}" [(ngModel)]="myModel" required #contactPhone placeholder="Telefone" ui-br-phone-number-mask="areaCode" value="(99) 99999-9999">
+            <button mat-button *ngIf="myModel" matSuffix mat-icon-button aria-label="Clear" (click)="myModel=''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </p>
+        
+        <div class="div-bt-incluir">
+          <button class="bt-incluir" mat-raised-button color="primary"  
+            (click)="add({name: contactName.value,
+            phone: contactPhone.value})">INCLUIR
+          </button>
+        </div>
+   </ng-container>
+
+   <ng-container *ngIf="cadastrar==false">
+     <div class="sucesso"></div>
+    <p class="label-informativo-cadastro">
+      Cadastrado com sucesso!
+    </p>
+    <div class="div-bt-incluir">
+      <button class="bt-listar-contatos" mat-raised-button  color="primary"
+        (click)="nextStep()">Listar contatos
+      </button>
+    </div>
+  </ng-container>
+     
+  
+      
+
+    </mat-tab>
+
+    <mat-tab label="VER CONTATOS">
+      
+      <mat-nav-list class="ver-contato">
+        <mat-list-item *ngFor="let contact of contacts">
+          <img matListAvatar [src]="contact.imgUrl">
+          <h4 mat-line>{{ contact.name }}</h4>
+          <p mat-line>{{ contact.phone }}</p>
+    
+          <button mat-icon-button (click)="delete(contact)"
+            matTooltip="Remove Contato" matTooltipPosition="above">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button (click)="inform(contact)"
+            matTooltip="Detalhes" matTooltipPosition="above">
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+          
+        </mat-list-item>
+      </mat-nav-list>
+
+    </mat-tab>
+   
+  </mat-tab-group>
+
+
+</mat-card>

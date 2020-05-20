@@ -1,0 +1,47 @@
+mat-card{
+    top: 10px;
+    left: 460px;
+    width: 447px;
+    height: 332px;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 20px #00000012;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+mat-form-field{
+    width: 80%;
+}
+
+button{
+    padding: 5px;
+}
+
+.add{
+    margin: auto;
+    width: 30%;
+}
+
+.sucesso{
+    margin-top: 20px;
+    margin: auto;
+    top: 345px;
+    left: 630px;
+    width: 107px;
+    height: 107px;
+    background: transparent url('../../../../interface/sucesso.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.mensagem{
+    top: 481px;
+    left: 588px;
+    width: 190px;
+    height: 19px;
+    text-align: center;
+    font: Medium 16px/19px Roboto;
+    letter-spacing: 0.16px;
+    color: #19A38F;
+    opacity: 1;
+}

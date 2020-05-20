@@ -1,0 +1,114 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+  .bg{
+    top: 64px;
+    left: 0px;
+    width: 1366px;
+    height: 704px;
+    background: transparent url('./interface/bg.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  .info{
+    top: 305px;
+    left: -10px;
+    width: 1376px;
+    height: 118px;
+    background: #F9FAF9 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  .banner{
+    top: 69px;
+    left: -10px;
+    width: 1376px;
+    height: 353px;
+    background: transparent url('./interface/background.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  .titulo{
+    text-transform: uppercase;
+    width: 50%;
+    font-size: 28px;
+    margin: auto;
+    top: 134px;
+    left: 497px;
+    width: 372px;
+    height: 49px;
+    text-align: left;
+    font: Regular 41px/49px Crete;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+
+  .logo{
+    top: 12px;
+    left: 602px;
+    width: 162px;
+    height: 44px;
+    background: transparent url('./interface/logo.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  .bounds{
+    top: 29px;
+    left: 0px;
+    width: 1366px;
+    height: 41px;
+    opacity: 1;
+  }
+
+  .linha{
+    top: 126px;
+    left: 617px;
+    width: 134px;
+    height: 0px;
+    border: 2px solid #EDC51B;
+    opacity: 1;
+  }
+
+  .ver-contato {
+    overflow: auto;
+    height: 300px;
+  }
+
+  .label-informativo-cadastro {
+    text-align: center;
+    font: Medium 16px/19px Roboto;
+    letter-spacing: 0.16px;
+    color: #14C2A9;
+    opacity: 1;
+  }
+
+  .bt-incluir {
+    background: transparent linear-gradient(255deg, #23C5AE 0%, #19A38F 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 20px #19A38F63;
+    border-radius: 6px;
+    opacity: 1;
+  }
+
+  .div-bt-incluir {
+    text-align: center;
+  }
+
+  .bt-listar-contatos {
+    background: transparent linear-gradient(255deg, #23C5AE 0%, #19A38F 100%) 0% 0% no-repeat padding-box;
+
+    box-shadow: 0px 10px 20px #19A38F63;
+    border: 1px solid #19A38F;
+    border-radius: 6px;
+    opacity: 1;
+
+    text-align: center;
+    font: Medium 16px/19px Roboto;
+    letter-spacing: 0.16px;
+    color: #19A38F;
+    opacity: 1;
+  }
