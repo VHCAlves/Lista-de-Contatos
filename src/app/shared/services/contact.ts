@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 
-export interface Contact {
+export class Contact {
     id:number;
     createdAt:DatePipe;
     phone:string;

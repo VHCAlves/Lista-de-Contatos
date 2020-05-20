@@ -11,7 +11,7 @@
         </div>
         <p>
           <mat-form-field hideRequiredMarker>
-            <input matInput #contactName placeholder="Nome" maxlength="20" [(ngModel)]="value">
+            <input matInput #contactName placeholder="Nome" maxlength="20" [(ngModel)]="name">
           </mat-form-field>
           <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
             <mat-icon>close</mat-icon>
@@ -19,7 +19,7 @@
         </p>
         <p>
           <mat-form-field hideRequiredMarker>
-            <input matInput [textMask]="{mask: datemask}" [(ngModel)]="myModel" required #contactPhone placeholder="Telefone" ui-br-phone-number-mask="areaCode" value="(99) 99999-9999">
+            <input matInput [textMask]="{mask: datemask}" [(ngModel)]="phone" required #contactPhone placeholder="Telefone" ui-br-phone-number-mask="areaCode" value="(99) 99999-9999">
             <button mat-button *ngIf="myModel" matSuffix mat-icon-button aria-label="Clear" (click)="myModel=''">
               <mat-icon>close</mat-icon>
             </button>
@@ -28,8 +28,7 @@
         
         <div class="div-bt-incluir">
           <button class="bt-incluir" mat-raised-button color="primary"  
-            (click)="add({name: contactName.value,
-            phone: contactPhone.value})">INCLUIR
+            (click)="add()">INCLUIR
           </button>
         </div>
    </ng-container>
